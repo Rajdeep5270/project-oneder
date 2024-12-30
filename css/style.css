@@ -1,0 +1,122 @@
+:root {
+    --black-color: #000;
+    --bg-color: #f1f1f1;
+    --hover-color: #0D6EFD;
+    --light-color: #ffffff;
+    --background-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "Work Sans" ,serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* banner section  */
+
+.banner {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/banner.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+}
+
+.banner .banner-content a:hover , .about .about-content a:hover {
+    background-color: var(--black-color);
+    border-color: var(--black-color);
+}
+
+/* team section  */
+
+.team .card .card-image .card-overlay {
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.team .card:hover .card-image .card-overlay {
+    transform: translateX(0);
+}
+
+/* portfolio section  */
+
+.portfolio ul li a {
+    color: var(--black-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio ul li a:hover {
+    background-color: var(--hover-color);
+    color: var(--light-color);
+}
+
+.portfolio .portfolio-header .portfolio-content .portfolio-img .img-overlay::before  {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.534);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.portfolio .portfolio-header .portfolio-content .portfolio-img:hover .img-overlay::before {
+    opacity: 1;
+}
+
+.portfolio .portfolio-header .portfolio-content .portfolio-img .img-overlay i {
+    transform: scale(0.3);
+    transition: all 0.3s linear;
+    visibility: hidden;
+}
+
+.portfolio .portfolio-header .portfolio-content .portfolio-img:hover .img-overlay i {
+    transform: scale(1);
+    visibility: visible;
+}
+
+/* blog section  */
+
+.blog .blog-content h5 a {
+    transition: all 0.3s linear;
+    color: var(--black-color);
+}
+
+.blog .blog-content h5 a:hover {
+    color: var(--hover-color);
+}
+
+.blog .blog-content .meta {
+    font-size: 14px;
+}
+
+/* footer-top section  */
+
+footer {
+    background-color: var(--background-color);
+}
+
+.footer-top .footer-top-title p {
+    font-size: 15px;
+}
